@@ -1,23 +1,20 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Selamat Ulang Tahun MyBebiii Cintaku</title>
+  <title>Happy Birthday, Bebiii My Love!</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <video autoplay muted loop id="bgVideo">
-    <source src="Pixar_Birthday_Video_Ready_.mp4" type="video/mp4" />
-  </video>
+  <canvas id="stars"></canvas>
+  <div class="heart-container"></div>
 
-  <audio autoplay loop>
-    <source src="HAPPY BIRTHDAY INSTRUMENTAL.mp3" type="audio/mpeg" />
-  </audio>
-
-  <div class="content">
-    <h1>Selamat Ulang Tahun, Sayang! 🎉</h1>
-    <p>I’m grateful every day because God brought you into my life.
+  <div class="content fade-in" id="mainContent">
+    <h1 class="animate-text">Happy Birthday, My Love 💖</h1>
+    <img src="love.jpg" alt="Our Memory" class="photo"/>
+    <p>
+      I’m grateful every day because God brought you into my life.
 You are the reason I smile, the reason I rise from all my exhaustion.
 
 Today is a special day, Bebiinduttt
@@ -33,11 +30,14 @@ Happy birthday, Bebi my love.
 May all your dreams and wishes come true, and I pray I can always be by your side —
 in laughter, in tears, in love, forever.
 
-I love you. Today, tomorrow, and always. 💖</p>
-    <img src="love.jpg" alt="Foto Pacar" class="foto" />
+I love you. Today, tomorrow, and always. 💖
+    </p>
+    <button id="replayBtn">🔁 Play Again</button>
   </div>
 
-  <div class="hearts"></div>
+  <audio id="bgMusic" autoplay loop>
+    <source src="HAPPY BIRTHDAY INSTRUMENTAL.mp3" type="audio/mp3">
+  </audio>
 
   <script src="script.js"></script>
 </body>
