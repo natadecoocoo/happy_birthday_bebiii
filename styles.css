@@ -1,115 +1,41 @@
-/* Reset dasar */
-* {
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
-  background-color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
 }
 
-/* Video */
-.background-video {
+#bgVideo {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  filter: brightness(0.4);
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 
-/* Efek Hati */
-.heart-container {
+.content {
+  margin-top: 20vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.foto {
+  margin-top: 20px;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.hearts {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
   pointer-events: none;
 }
-
-/* Konten Utama */
-.main-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 30px;
-  top: 10vh;
-  color: #fff;
-}
-
-.foto-romantis {
-  width: 200px;
-  border-radius: 20px;
-  border: 3px solid #fff;
-  box-shadow: 0 0 15px #ffb6c1;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  color: #ff9aa2;
-  margin-bottom: 20px;
-}
-
-.romantic-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 30px;
-  white-space: pre-line;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px #fff3f3;
-}
-
-/* Tombol */
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-button {
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
-  background-color: #ff6f91;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px #ffb6c1;
-}
-button:hover {
-  background-color: #ff9aa2;
-}
-
-/* Hati */
-@keyframes fall {
-  0% { transform: translateY(-10%) rotate(0); opacity: 1; }
-  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
-}
-.heart {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: pink;
-  transform: rotate(45deg);
-  animation: fall linear forwards;
-}
-.heart::before,
-.heart::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: pink;
-  border-radius: 50%;
-}
-.heart::before { top: -10px; left: 0; }
-.heart::after { top: 0; left: -10px; }
